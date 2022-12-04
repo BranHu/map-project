@@ -1,0 +1,476 @@
+[
+  {
+    "index": 1,
+    "patent": 1,
+    "amount": 1102,
+    "percentage": 0.4608950230029277
+  },
+  {
+    "index": 2,
+    "patent": 2,
+    "amount": 396,
+    "percentage": 0.1656210790464241
+  },
+  {
+    "index": 3,
+    "patent": 3,
+    "amount": 226,
+    "percentage": 0.0945211208699289
+  },
+  {
+    "index": 4,
+    "patent": 4,
+    "amount": 125,
+    "percentage": 0.05227938101212882
+  },
+  {
+    "index": 5,
+    "patent": 5,
+    "amount": 100,
+    "percentage": 0.04182350480970305
+  },
+  {
+    "index": 6,
+    "patent": 6,
+    "amount": 67,
+    "percentage": 0.028021748222501044
+  },
+  {
+    "index": 7,
+    "patent": 7,
+    "amount": 49,
+    "percentage": 0.020493517356754497
+  },
+  {
+    "index": 8,
+    "patent": 8,
+    "amount": 40,
+    "percentage": 0.016729401923881223
+  },
+  {
+    "index": 9,
+    "patent": 9,
+    "amount": 30,
+    "percentage": 0.012547051442910916
+  },
+  {
+    "index": 10,
+    "patent": 10,
+    "amount": 18,
+    "percentage": 0.0075282308657465494
+  },
+  {
+    "index": 11,
+    "patent": 11,
+    "amount": 14,
+    "percentage": 0.005855290673358427
+  },
+  {
+    "index": 12,
+    "patent": 12,
+    "amount": 17,
+    "percentage": 0.007109995817649519
+  },
+  {
+    "index": 13,
+    "patent": 13,
+    "amount": 13,
+    "percentage": 0.005437055625261397
+  },
+  {
+    "index": 14,
+    "patent": 14,
+    "amount": 15,
+    "percentage": 0.006273525721455458
+  },
+  {
+    "index": 15,
+    "patent": 15,
+    "amount": 15,
+    "percentage": 0.006273525721455458
+  },
+  {
+    "index": 16,
+    "patent": 16,
+    "amount": 10,
+    "percentage": 0.004182350480970306
+  },
+  {
+    "index": 17,
+    "patent": 17,
+    "amount": 8,
+    "percentage": 0.003345880384776244
+  },
+  {
+    "index": 18,
+    "patent": 18,
+    "amount": 10,
+    "percentage": 0.004182350480970306
+  },
+  {
+    "index": 19,
+    "patent": 19,
+    "amount": 7,
+    "percentage": 0.0029276453366792136
+  },
+  {
+    "index": 20,
+    "patent": 20,
+    "amount": 9,
+    "percentage": 0.0037641154328732747
+  },
+  {
+    "index": 21,
+    "patent": 21,
+    "amount": 4,
+    "percentage": 0.001672940192388122
+  },
+  {
+    "index": 22,
+    "patent": 22,
+    "amount": 6,
+    "percentage": 0.002509410288582183
+  },
+  {
+    "index": 23,
+    "patent": 23,
+    "amount": 10,
+    "percentage": 0.004182350480970306
+  },
+  {
+    "index": 24,
+    "patent": 24,
+    "amount": 4,
+    "percentage": 0.001672940192388122
+  },
+  {
+    "index": 25,
+    "patent": 25,
+    "amount": 1,
+    "percentage": 0.0004182350480970305
+  },
+  {
+    "index": 26,
+    "patent": 26,
+    "amount": 5,
+    "percentage": 0.002091175240485153
+  },
+  {
+    "index": 27,
+    "patent": 27,
+    "amount": 7,
+    "percentage": 0.0029276453366792136
+  },
+  {
+    "index": 28,
+    "patent": 28,
+    "amount": 5,
+    "percentage": 0.002091175240485153
+  },
+  {
+    "index": 29,
+    "patent": 29,
+    "amount": 7,
+    "percentage": 0.0029276453366792136
+  },
+  {
+    "index": 30,
+    "patent": 30,
+    "amount": 2,
+    "percentage": 0.000836470096194061
+  },
+  {
+    "index": 31,
+    "patent": 31,
+    "amount": 4,
+    "percentage": 0.001672940192388122
+  },
+  {
+    "index": 32,
+    "patent": 32,
+    "amount": 2,
+    "percentage": 0.000836470096194061
+  },
+  {
+    "index": 33,
+    "patent": 33,
+    "amount": 2,
+    "percentage": 0.000836470096194061
+  },
+  {
+    "index": 34,
+    "patent": 34,
+    "amount": 1,
+    "percentage": 0.0004182350480970305
+  },
+  {
+    "index": 35,
+    "patent": 36,
+    "amount": 1,
+    "percentage": 0.0004182350480970305
+  },
+  {
+    "index": 36,
+    "patent": 37,
+    "amount": 1,
+    "percentage": 0.0004182350480970305
+  },
+  {
+    "index": 37,
+    "patent": 38,
+    "amount": 1,
+    "percentage": 0.0004182350480970305
+  },
+  {
+    "index": 38,
+    "patent": 40,
+    "amount": 2,
+    "percentage": 0.000836470096194061
+  },
+  {
+    "index": 39,
+    "patent": 41,
+    "amount": 2,
+    "percentage": 0.000836470096194061
+  },
+  {
+    "index": 40,
+    "patent": 42,
+    "amount": 3,
+    "percentage": 0.0012547051442910915
+  },
+  {
+    "index": 41,
+    "patent": 43,
+    "amount": 3,
+    "percentage": 0.0012547051442910915
+  },
+  {
+    "index": 42,
+    "patent": 44,
+    "amount": 4,
+    "percentage": 0.001672940192388122
+  },
+  {
+    "index": 43,
+    "patent": 45,
+    "amount": 1,
+    "percentage": 0.0004182350480970305
+  },
+  {
+    "index": 44,
+    "patent": 46,
+    "amount": 1,
+    "percentage": 0.0004182350480970305
+  },
+  {
+    "index": 45,
+    "patent": 50,
+    "amount": 2,
+    "percentage": 0.000836470096194061
+  },
+  {
+    "index": 46,
+    "patent": 51,
+    "amount": 1,
+    "percentage": 0.0004182350480970305
+  },
+  {
+    "index": 47,
+    "patent": 52,
+    "amount": 1,
+    "percentage": 0.0004182350480970305
+  },
+  {
+    "index": 48,
+    "patent": 53,
+    "amount": 1,
+    "percentage": 0.0004182350480970305
+  },
+  {
+    "index": 49,
+    "patent": 54,
+    "amount": 2,
+    "percentage": 0.000836470096194061
+  },
+  {
+    "index": 50,
+    "patent": 56,
+    "amount": 2,
+    "percentage": 0.000836470096194061
+  },
+  {
+    "index": 51,
+    "patent": 57,
+    "amount": 1,
+    "percentage": 0.0004182350480970305
+  },
+  {
+    "index": 52,
+    "patent": 60,
+    "amount": 2,
+    "percentage": 0.000836470096194061
+  },
+  {
+    "index": 53,
+    "patent": 61,
+    "amount": 1,
+    "percentage": 0.0004182350480970305
+  },
+  {
+    "index": 54,
+    "patent": 63,
+    "amount": 1,
+    "percentage": 0.0004182350480970305
+  },
+  {
+    "index": 55,
+    "patent": 64,
+    "amount": 1,
+    "percentage": 0.0004182350480970305
+  },
+  {
+    "index": 56,
+    "patent": 69,
+    "amount": 2,
+    "percentage": 0.000836470096194061
+  },
+  {
+    "index": 57,
+    "patent": 70,
+    "amount": 1,
+    "percentage": 0.0004182350480970305
+  },
+  {
+    "index": 58,
+    "patent": 72,
+    "amount": 1,
+    "percentage": 0.0004182350480970305
+  },
+  {
+    "index": 59,
+    "patent": 82,
+    "amount": 2,
+    "percentage": 0.000836470096194061
+  },
+  {
+    "index": 60,
+    "patent": 84,
+    "amount": 1,
+    "percentage": 0.0004182350480970305
+  },
+  {
+    "index": 61,
+    "patent": 93,
+    "amount": 1,
+    "percentage": 0.0004182350480970305
+  },
+  {
+    "index": 62,
+    "patent": 95,
+    "amount": 1,
+    "percentage": 0.0004182350480970305
+  },
+  {
+    "index": 63,
+    "patent": 97,
+    "amount": 1,
+    "percentage": 0.0004182350480970305
+  },
+  {
+    "index": 64,
+    "patent": 99,
+    "amount": 1,
+    "percentage": 0.0004182350480970305
+  },
+  {
+    "index": 65,
+    "patent": 100,
+    "amount": 1,
+    "percentage": 0.0004182350480970305
+  },
+  {
+    "index": 66,
+    "patent": 109,
+    "amount": 1,
+    "percentage": 0.0004182350480970305
+  },
+  {
+    "index": 67,
+    "patent": 166,
+    "amount": 1,
+    "percentage": 0.0004182350480970305
+  },
+  {
+    "index": 68,
+    "patent": 213,
+    "amount": 1,
+    "percentage": 0.0004182350480970305
+  },
+  {
+    "index": 69,
+    "patent": 259,
+    "amount": 1,
+    "percentage": 0.0004182350480970305
+  },
+  {
+    "index": 70,
+    "patent": 272,
+    "amount": 1,
+    "percentage": 0.0004182350480970305
+  },
+  {
+    "index": 71,
+    "patent": 426,
+    "amount": 1,
+    "percentage": 0.0004182350480970305
+  },
+  {
+    "index": 72,
+    "patent": 438,
+    "amount": 1,
+    "percentage": 0.0004182350480970305
+  },
+  {
+    "index": 73,
+    "patent": 472,
+    "amount": 1,
+    "percentage": 0.0004182350480970305
+  },
+  {
+    "index": 74,
+    "patent": 868,
+    "amount": 1,
+    "percentage": 0.0004182350480970305
+  },
+  {
+    "index": 75,
+    "patent": 1069,
+    "amount": 1,
+    "percentage": 0.0004182350480970305
+  },
+  {
+    "index": 76,
+    "patent": 1256,
+    "amount": 1,
+    "percentage": 0.0004182350480970305
+  },
+  {
+    "index": 77,
+    "patent": 1273,
+    "amount": 1,
+    "percentage": 0.0004182350480970305
+  },
+  {
+    "index": 78,
+    "patent": 1584,
+    "amount": 1,
+    "percentage": 0.0004182350480970305
+  },
+  {
+    "index": 79,
+    "patent": 1797,
+    "amount": 1,
+    "percentage": 0.0004182350480970305
+  }
+]

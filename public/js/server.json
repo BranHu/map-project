@@ -1,0 +1,407 @@
+[
+  {
+    "index": 1.0,
+    "company": "武汉华星光电技术有限公司",
+    "patent": 1797.0,
+    "PCT": 407.0,
+    "export": "A级",
+    "industrial": "光电子科技",
+    "grade": "1级"
+  },
+  {
+    "index": 2.0,
+    "company": "烽火通信科技股份有限公司",
+    "patent": 1584.0,
+    "PCT": 32.0,
+    "export": "A级*",
+    "industrial": "网络通信",
+    "grade": "1级"
+  },
+  {
+    "index": 3.0,
+    "company": "武汉斗鱼网络科技有限公司",
+    "patent": 1273.0,
+    "PCT": null,
+    "export": null,
+    "industrial": "网络通信",
+    "grade": "1级"
+  },
+  {
+    "index": 4.0,
+    "company": "武汉华星光电半导体显示技术有限公司",
+    "patent": 1256.0,
+    "PCT": 869.0,
+    "export": "B级",
+    "industrial": "光电子科技",
+    "grade": "1级"
+  },
+  {
+    "index": 5.0,
+    "company": "长江存储科技有限责任公司",
+    "patent": 1069.0,
+    "PCT": 377.0,
+    "export": "A级",
+    "industrial": "光电子科技",
+    "grade": "1级"
+  },
+  {
+    "index": 6.0,
+    "company": "中冶南方工程技术有限公司",
+    "patent": 868.0,
+    "PCT": 52.0,
+    "export": "C级",
+    "industrial": "先进装备制造业",
+    "grade": "1级"
+  },
+  {
+    "index": 7.0,
+    "company": "武汉天马微电子有限公司",
+    "patent": 472.0,
+    "PCT": 5.0,
+    "export": "B级",
+    "industrial": "光电子科技",
+    "grade": "2级"
+  },
+  {
+    "index": 8.0,
+    "company": "武汉新芯集成电路制造有限公司",
+    "patent": 438.0,
+    "PCT": 36.0,
+    "export": "A级",
+    "industrial": "光电子科技",
+    "grade": "2级"
+  },
+  {
+    "index": 9.0,
+    "company": "武汉光迅科技股份有限公司",
+    "patent": 426.0,
+    "PCT": 45.0,
+    "export": "A级",
+    "industrial": "光电子科技",
+    "grade": "2级"
+  },
+  {
+    "index": 10.0,
+    "company": "长飞光纤光缆股份有限公司",
+    "patent": 272.0,
+    "PCT": 7.0,
+    "export": "A级",
+    "industrial": "光电子科技",
+    "grade": "2级"
+  },
+  {
+    "index": 11.0,
+    "company": "武汉精测电子集团股份有限公司",
+    "patent": 259.0,
+    "PCT": 12.0,
+    "export": null,
+    "industrial": "光电子科技",
+    "grade": "2级"
+  },
+  {
+    "index": 12.0,
+    "company": "武汉电信器件有限公司",
+    "patent": 213.0,
+    "PCT": null,
+    "export": "B级",
+    "industrial": "光电子科技",
+    "grade": "2级"
+  },
+  {
+    "index": 13.0,
+    "company": "国网电力科学研究院武汉南瑞有限责任公司",
+    "patent": 166.0,
+    "PCT": null,
+    "export": null,
+    "industrial": "能源及环保",
+    "grade": "2级"
+  },
+  {
+    "index": 14.0,
+    "company": "武汉邮电科学研究院",
+    "patent": 109.0,
+    "PCT": null,
+    "export": null,
+    "industrial": "光电子科技",
+    "grade": "2级"
+  },
+  {
+    "index": 15.0,
+    "company": "核动力运行研究所",
+    "patent": 100.0,
+    "PCT": null,
+    "export": null,
+    "industrial": "能源及环保",
+    "grade": "2级"
+  },
+  {
+    "index": 16.0,
+    "company": "武汉精立电子技术有限公司",
+    "patent": 99.0,
+    "PCT": null,
+    "export": null,
+    "industrial": "光电子科技",
+    "grade": "3级"
+  },
+  {
+    "index": 17.0,
+    "company": "凹凸电子（武汉）有限公司",
+    "patent": 97.0,
+    "PCT": null,
+    "export": null,
+    "industrial": "光电子科技",
+    "grade": "3级"
+  },
+  {
+    "index": 18.0,
+    "company": "中国水产科学研究院长江水产研究所",
+    "patent": 95.0,
+    "PCT": null,
+    "export": null,
+    "industrial": "生命健康",
+    "grade": "3级"
+  },
+  {
+    "index": 19.0,
+    "company": "中冶南方（武汉）自动化有限公司",
+    "patent": 93.0,
+    "PCT": null,
+    "export": null,
+    "industrial": "先进装备制造业",
+    "grade": "3级"
+  },
+  {
+    "index": 20.0,
+    "company": "华灿光电股份有限公司",
+    "patent": 84.0,
+    "PCT": null,
+    "export": null,
+    "industrial": "光电子科技",
+    "grade": "3级"
+  },
+  {
+    "index": 21.0,
+    "company": "武汉烽火众智数字技术有限责任公司",
+    "patent": 82.0,
+    "PCT": null,
+    "export": null,
+    "industrial": "光电子科技",
+    "grade": "3级"
+  },
+  {
+    "index": 22.0,
+    "company": "中国五环工程有限公司",
+    "patent": 82.0,
+    "PCT": null,
+    "export": "C级",
+    "industrial": "材料化工",
+    "grade": "3级"
+  },
+  {
+    "index": 23.0,
+    "company": "华烁科技股份有限公司",
+    "patent": 72.0,
+    "PCT": null,
+    "export": null,
+    "industrial": "材料化工",
+    "grade": "3级"
+  },
+  {
+    "index": 24.0,
+    "company": "中建商品混凝土有限公司",
+    "patent": 70.0,
+    "PCT": null,
+    "export": null,
+    "industrial": "材料化工",
+    "grade": "3级"
+  },
+  {
+    "index": 25.0,
+    "company": "武汉绿色网络信息服务有限责任公司",
+    "patent": 69.0,
+    "PCT": 20.0,
+    "export": null,
+    "industrial": "网络通信",
+    "grade": "3级"
+  },
+  {
+    "index": 26.0,
+    "company": "中冶南方（武汉）热工有限公司",
+    "patent": 69.0,
+    "PCT": null,
+    "export": null,
+    "industrial": "能源及环保",
+    "grade": "3级"
+  },
+  {
+    "index": 27.0,
+    "company": "武汉天喻信息产业股份有限公司",
+    "patent": 64.0,
+    "PCT": 10.0,
+    "export": "C级",
+    "industrial": "网络通信",
+    "grade": "3级"
+  },
+  {
+    "index": 28.0,
+    "company": "语联网（武汉）信息技术有限公司",
+    "patent": 63.0,
+    "PCT": 10.0,
+    "export": null,
+    "industrial": "网络通信",
+    "grade": "3级"
+  },
+  {
+    "index": 29.0,
+    "company": "武汉理工光科股份有限公司",
+    "patent": 61.0,
+    "PCT": null,
+    "export": null,
+    "industrial": "光电子科技",
+    "grade": "3级"
+  },
+  {
+    "index": 30.0,
+    "company": "武汉万集信息技术有限公司",
+    "patent": 60.0,
+    "PCT": null,
+    "export": null,
+    "industrial": "网络通信",
+    "grade": "3级"
+  },
+  {
+    "index": 31.0,
+    "company": "中国船舶重工集团公司第七0九研究所",
+    "patent": 60.0,
+    "PCT": null,
+    "export": null,
+    "industrial": "先进装备制造业",
+    "grade": "3级"
+  },
+  {
+    "index": 32.0,
+    "company": "武汉华工激光工程有限责任公司",
+    "patent": 57.0,
+    "PCT": 12.0,
+    "export": null,
+    "industrial": "光电子科技",
+    "grade": "3级"
+  },
+  {
+    "index": 33.0,
+    "company": "武大吉奥信息技术有限公司",
+    "patent": 56.0,
+    "PCT": null,
+    "export": null,
+    "industrial": "网络通信",
+    "grade": "3级"
+  },
+  {
+    "index": 34.0,
+    "company": "武汉航空仪表有限责任公司",
+    "patent": 56.0,
+    "PCT": null,
+    "export": null,
+    "industrial": "先进装备制造业",
+    "grade": "3级"
+  },
+  {
+    "index": 35.0,
+    "company": "武汉达梦数据库股份有限公司",
+    "patent": 54.0,
+    "PCT": null,
+    "export": null,
+    "industrial": "网络通信",
+    "grade": "3级"
+  },
+  {
+    "index": 36.0,
+    "company": "武汉人天包装自动化技术股份有限公司",
+    "patent": 54.0,
+    "PCT": null,
+    "export": null,
+    "industrial": "先进装备制造业",
+    "grade": "3级"
+  },
+  {
+    "index": 37.0,
+    "company": "武汉新华扬生物股份有限公司",
+    "patent": 53.0,
+    "PCT": null,
+    "export": null,
+    "industrial": "生命健康",
+    "grade": "3级"
+  },
+  {
+    "index": 38.0,
+    "company": "中核武汉核电运行技术股份有限公司",
+    "patent": 52.0,
+    "PCT": null,
+    "export": null,
+    "industrial": "能源及环保",
+    "grade": "3级"
+  },
+  {
+    "index": 39.0,
+    "company": "中建三局集团有限公司",
+    "patent": 51.0,
+    "PCT": null,
+    "export": null,
+    "industrial": "先进装备制造业",
+    "grade": "3级"
+  },
+  {
+    "index": 40.0,
+    "company": "嘉必优生物技术（武汉）股份有限公司",
+    "patent": 50.0,
+    "PCT": null,
+    "export": "C级",
+    "industrial": "生命健康",
+    "grade": "3级"
+  },
+  {
+    "index": 41.0,
+    "company": "武汉中科通达高新技术股份有限公司",
+    "patent": 50.0,
+    "PCT": null,
+    "export": null,
+    "industrial": "网络通信",
+    "grade": "3级"
+  },
+  {
+    "index": 42.0,
+    "company": "武汉思普崚技术有限公司",
+    "patent": 46.0,
+    "PCT": null,
+    "export": null,
+    "industrial": "网络通信",
+    "grade": "4级"
+  },
+  {
+    "index": 43.0,
+    "company": "中石化江钻石油机械有限公司",
+    "patent": 45.0,
+    "PCT": null,
+    "export": null,
+    "industrial": "能源及环保",
+    "grade": "4级"
+  },
+  {
+    "index": 44.0,
+    "company": "武汉安天信息技术有限责任公司",
+    "patent": 44.0,
+    "PCT": null,
+    "export": null,
+    "industrial": "网络通信",
+    "grade": "4级"
+  },
+  {
+    "index": 45.0,
+    "company": "武汉虹信技术服务有限责任公司",
+    "patent": 44.0,
+    "PCT": null,
+    "export": null,
+    "industrial": "网络通信",
+    "grade": "4级"
+  }
+]

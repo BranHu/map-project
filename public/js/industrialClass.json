@@ -1,0 +1,37 @@
+[
+  {
+    "index": 1.0,
+    "industrial": "生命健康",
+    "amount": 423.0
+  },
+  {
+    "index": 2.0,
+    "industrial": "光电子科技",
+    "amount": 368.0
+  },
+  {
+    "index": 3.0,
+    "industrial": "网络通信",
+    "amount": 303.0
+  },
+  {
+    "index": 4.0,
+    "industrial": "先进装备制造业",
+    "amount": 298.0
+  },
+  {
+    "index": 5.0,
+    "industrial": "能源及环保",
+    "amount": 199.0
+  },
+  {
+    "index": 6.0,
+    "industrial": "材料化工",
+    "amount": 67.0
+  },
+  {
+    "index": 7.0,
+    "industrial": "其他",
+    "amount": 733.0
+  }
+]

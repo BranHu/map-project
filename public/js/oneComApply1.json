@@ -1,0 +1,102 @@
+[
+  {
+    "year": 2003,
+    "apply": 0,
+    "grant": 0
+  },
+  {
+    "year": 2004,
+    "apply": 1,
+    "grant": 1
+  },
+  {
+    "year": 2005,
+    "apply": 8,
+    "grant": 8
+  },
+  {
+    "year": 2006,
+    "apply": 7,
+    "grant": 7
+  },
+  {
+    "year": 2007,
+    "apply": 3,
+    "grant": 3
+  },
+  {
+    "year": 2008,
+    "apply": 3,
+    "grant": 3
+  },
+  {
+    "year": 2009,
+    "apply": 0,
+    "grant": 0
+  },
+  {
+    "year": 2010,
+    "apply": 0,
+    "grant": 0
+  },
+  {
+    "year": 2011,
+    "apply": 0,
+    "grant": 0
+  },
+  {
+    "year": 2012,
+    "apply": 3,
+    "grant": 3
+  },
+  {
+    "year": 2013,
+    "apply": 3,
+    "grant": 3
+  },
+  {
+    "year": 2014,
+    "apply": 5,
+    "grant": 5
+  },
+  {
+    "year": 2015,
+    "apply": 825,
+    "grant": 521
+  },
+  {
+    "year": 2016,
+    "apply": 1148,
+    "grant": 671
+  },
+  {
+    "year": 2017,
+    "apply": 876,
+    "grant": 453
+  },
+  {
+    "year": 2018,
+    "apply": 698,
+    "grant": 347
+  },
+  {
+    "year": 2019,
+    "apply": 493,
+    "grant": 169
+  },
+  {
+    "year": 2020,
+    "apply": 452,
+    "grant": 188
+  },
+  {
+    "year": 2021,
+    "apply": 410,
+    "grant": 103
+  },
+  {
+    "year": 2022,
+    "apply": 133,
+    "grant": 0
+  }
+]
