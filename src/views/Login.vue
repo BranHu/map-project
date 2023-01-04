@@ -4,7 +4,7 @@
     <EchartEarth />
 
     <div class="title">
-      <h1>湖北科技创新大走廊</h1>
+      <h1>光谷科技创新大走廊</h1>
       <h1>知识产权大数据平台</h1>
     </div>
 

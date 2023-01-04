@@ -1,7 +1,7 @@
 <script setup></script>
 <template>
   <div class="nav">
-    <p>东湖高新区知识产权大数据服务平台</p>
+    <p>光谷科技创新大走廊知识产权大数据服务平台</p>
   </div>
 </template>
 

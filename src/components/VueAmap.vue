@@ -11,12 +11,14 @@ import { onMounted, shallowRef, ref } from "vue";
 import donghugaoxing from "/public/js/donghugaoxing.js"
 import maskBorder from "/public/js/mask.js" 
 import groups from "/public/js/group.js"
+import AMapLoader from "@amap/amap-jsapi-loader";
 
 let amap = shallowRef(null);
 let loca = null;
 let districtAmap = null;
 let cityAmap = null;
 let activePolygon = null;
+let donghugaoxingMarker = null;
 let mask = ref(false);
 // let jiangxiaSeg = null 东湖高新用第一个js的时候要用
 // let hongshanSeg = null
@@ -67,8 +69,9 @@ const districtConf = [
     opacity: 0.8
   }
 ]
-const belts = [];
-const axis = [];
+// const belts = [];
+// const axis = [];
+let mapGroup = [];
 const initMap = () => {
   amap = new AMap.Map("amap", {
     center: [114.405188,30.497573],
@@ -160,6 +163,19 @@ const drawOnlyDonghu = () => {
 }
 
 const drawIcon = ()=> {
+  const icon = new AMap.Icon({
+    size: new AMap.Size(200, 200),
+    image: '/img/core.png',
+    imageSize: new AMap.Size(200, 200),   // 根据所设置的大小拉伸或压缩图片
+    // imageOffset: new AMap.Pixel(0, -60),  // 图像相对展示区域的偏移量，适于雪碧图等
+  });
+  donghugaoxingMarker = new AMap.Marker({
+    position: new AMap.LngLat(114.410838,30.453863),
+    offset: new AMap.Pixel(-65, -200),
+    icon: icon, // 添加 Icon 实例
+    title: '东湖高新'
+  });
+  amap.add(donghugaoxingMarker)
   // 鄂州机场
   // const icon1 = new AMap.Icon({
   //   size: new AMap.Size(300, 300),
@@ -226,24 +242,15 @@ const drawIcon = ()=> {
   //   title: '黄冈'
   // });
   // 东湖高新
-  const icon6 = new AMap.Icon({
-    size: new AMap.Size(200, 200),
-    image: '/img/core.png',
-    imageSize: new AMap.Size(200, 200),   // 根据所设置的大小拉伸或压缩图片
-    // imageOffset: new AMap.Pixel(0, -60),  // 图像相对展示区域的偏移量，适于雪碧图等
-  });
-  const marker6 = new AMap.Marker({
-    position: new AMap.LngLat(114.410838,30.453863),
-    offset: new AMap.Pixel(-65, -200),
-    icon: icon6, // 添加 Icon 实例
-    title: '东湖高新'
-  });
-  amap.add(marker6)
   // amap.add(marker1)
   // amap.add(marker2)
   // amap.add(marker3)
   // amap.add(marker4)
   // amap.add(marker5)
+}
+
+const removeIcon = () => {
+  amap.remove(donghugaoxingMarker)
 }
 
 const draw4gaoixng = () => {
@@ -340,6 +347,7 @@ const drawGroup = () => {
         extData: { id: el.name },
       });
       amap.add(polygon);
+      mapGroup.push(polygon)
     } else {
       const polygon = new AMap.Polygon({
         strokeWeight: 1,
@@ -351,8 +359,16 @@ const drawGroup = () => {
         extData: { id: el.name },
       });
       amap.add(polygon);
+      mapGroup.push(polygon);
     }
   })
+}
+
+const removeGroup = () => {
+  mapGroup.map(group => {
+    amap.remove(group);
+  })
+  mapGroup = []
 }
 
 // 获取各个市的地理数据
@@ -746,8 +762,10 @@ defineExpose({
   drawCityBounds,
   drawDistrictBounds,
   drawIcon,
+  removeIcon,
   draw4gaoixng,
   drawGroup,
+  removeGroup,
   drawScatter,
   drawPage4Scatter,
   clearScatter,
@@ -831,7 +849,21 @@ const removeAxis = () => {
 }
 
 onMounted(() => {
-  initMap();
+  AMapLoader.load({
+    key: "d4952430453386b3ad5e846e57338267", // 申请好的Web端开发者Key，首次调用 load 时必填
+    version: "2.0", // 指定要加载的 JSAPI 的版本，缺省时默认为 1.4.15
+    plugins: ["AMap.DistrictSearch"], // 需要使用的的插件列表，如比例尺'AMap.Scale'等
+    Loca: {
+      // 是否加载 Loca， 缺省不加载
+      version: "2.0.0", // Loca 版本，缺省 1.3.2
+    },
+  })
+    .then(() => {
+      initMap();
+    })
+    .catch((e) => {
+      console.log(e);
+    });
 });
 </script>
 <style scoped>

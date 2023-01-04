@@ -13,7 +13,9 @@
     @drawCityBounds="drawCityBounds"
     @drawDistrictBounds="drawDistrictBounds"
     @drawGroup="drawGroup"
+    @removeGroup="removeGroup"
     @drawIcon="drawIcon"
+    @removeIcon="removeIcon"
     @setZoom="setZoom"
   />
 
@@ -120,8 +122,16 @@ const drawGroup = () => {
   amapRef.value.drawGroup();
 };
 
+const removeGroup = () => {
+  amapRef.value.removeGroup();
+};
+
 const drawIcon = () => {
   amapRef.value.drawIcon();
+};
+
+const removeIcon = () => {
+  amapRef.value.removeIcon();
 };
 
 const setZoom = (size) => {

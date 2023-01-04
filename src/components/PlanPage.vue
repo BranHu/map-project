@@ -6,11 +6,13 @@ const emits = defineEmits([
   "drawCityBounds",
   "drawDistrictBounds",
   "drawGroup",
+  "removeGroup",
   "drawIcon",
+  "removeIcon",
   "setZoom",
 ]);
 
-let page = ref(1);
+let page = ref(0);
 
 let plan = ref(false);
 let space = ref(false);
@@ -41,7 +43,7 @@ const play1 = () => {
   initFrame();
   playStatus.value = true;
   // 第一页 要进一步讨论
-  stepOne();
+  addOne();
   setTimeout(() => {
     // 第二页
     emits("drawDistrictBounds");
@@ -81,44 +83,60 @@ const play = () => {
 };
 
 const backward = () => {
-  page.value--;
   console.log(page.value);
   switch (page.value) {
     case 0:
-      console.log("禁止");
+      ElMessage({
+        message: '已经是最前一页',
+        type: 'warning',
+      })
       break;
     case 1:
-      removeTwo();
+      clearAll();
       break;
     case 2:
-      removeThree();
+      backwardOne();
       break;
     case 3:
-      removeFour();
+      backwardTwo();
       break;
     case 4:
-      removeFive();
+      backwardThree();
+      break;
+    case 5:
+      backwardFour();
       break;
     default:
       break;
   }
+  page.value--;
 };
 
 const forward = () => {
   page.value++;
   console.log(page.value);
   switch (page.value) {
+    case 1:
+      forwardOne();
+      break;
     case 2:
-      addTwo();
+      forwardTwo();
       break;
     case 3:
-      addThree();
+      forwardThree();
       break;
     case 4:
-      addFour();
+      forwardFour();
       break;
     case 5:
-      addFive();
+      forwardFive();
+      break;
+    case 6:
+      page.value = 5
+      ElMessage({
+        message: '已经是最后一页',
+        type: 'error',
+      })
       break;
     default:
       console.log("禁止");
@@ -126,41 +144,53 @@ const forward = () => {
   }
 };
 
-// 第一页
-const addOne = () => {
+const clearAll = () => {
   emits("playInit");
   initFrame();
-  playStatus.value = true;
+}
+
+// 第一页
+const forwardOne = () => {
+  emits("playInit");
+  initFrame();
   plan.value = true;
   emits("drawCityBounds");
   emits("setZoom", 8);
 };
 
-const addTwo = () => {
+const backwardOne = () => {
+  // emits("removeDistrictBounds"); 2023.1.4
+  emits("setZoom", 8);
+};
+
+const forwardTwo = () => {
   emits("drawDistrictBounds");
   emits("setZoom", 9);
 };
 
-const removeTwo = () => {
-  emits("playInit");
-  emits("drawCityBounds");
-  emits("setZoom", 8);
+const backwardTwo = () => {
   plan.value = true;
+  space.value = false;
+  axis.value = false;
 };
 
-const addThree = () => {
+const forwardThree = () => {
   plan.value = false;
   space.value = true;
   axis.value = true;
 };
 
-const removeThree = () => {
-  space.value = false;
-  axis.value = false;
-  plan.value = true;
+const backwardThree = () => {
+  emits("removeIcon");
+  emits("removeGroup");
+  axis.value = true;
+  beltElectronic.value = false;
+  beltHealth.value = false;
+  beltIntellect.value = false;
+  strategy.value = false;
 };
 
-const addFour = () => {
+const forwardFour = () => {
   axis.value = false;
   beltElectronic.value = true;
   beltHealth.value = true;
@@ -170,32 +200,24 @@ const addFour = () => {
   emits("drawIcon");
 };
 
-const removeFour = () => {
-  axis.value = true;
+const backwardFour = () => {
+  space.value = true;
+  strategy.value = true;
+  beltElectronic.value = true;
+  beltHealth.value = true;
+  beltIntellect.value = true;
+  plan2025.value = false;
+  plan2035.value = false;
+};
+
+const forwardFive = () => {
+  space.value = false;
+  strategy.value = false;
   beltElectronic.value = false;
   beltHealth.value = false;
   beltIntellect.value = false;
-  strategy.value = false;
-  emits("playInit");
-  emits("drawCityBounds");
-  emits("drawDistrictBounds");
-};
-
-const addFive = () => {
-  emits("playInit");
-  emits("drawGroup");
-  emits("drawIcon");
-  space.value = false;
-  strategy.value = false;
   plan2025.value = true;
   plan2035.value = true;
-};
-
-const removeFive = () => {
-  space.value = true;
-  strategy.value = true;
-  plan2025.value = false;
-  plan2035.value = false;
 };
 
 // 第二页
@@ -421,7 +443,7 @@ const stopPageFour = () => {
   opacity: 0.5;
   vertical-align: middle;
   border-radius: 4px;
-  cursor: not-allowed;
+  /* cursor: not-allowed; */
 }
 .limit {
   position: absolute;
