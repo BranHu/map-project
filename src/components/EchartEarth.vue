@@ -93,7 +93,7 @@ function renderEarth(opt, size, target, rotate) {
         label: {
           show: true,
           fontSize: 30,
-          color: "green",
+          color: "#00e6f0",
         },
         itemStyle: {
           areaColor: "rgb(20, 80, 130)",
@@ -219,7 +219,7 @@ function renderEarth(opt, size, target, rotate) {
           color: "#0087f4",
           width: 1,
           curveness: 0.3,
-          opacity: 0.1
+          opacity: 0.1,
         },
         blendMode: "lighter",
         data: [],
@@ -237,7 +237,7 @@ function renderEarth(opt, size, target, rotate) {
           fontSize: 20,
           // 文字顔色
           color: "#43D0D6",
-          formatter: "{b}"
+          formatter: "{b}",
         },
         // emphasis: {
         //   itemStyle: {

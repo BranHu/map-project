@@ -121,7 +121,7 @@ const drawDistrictBounds = () => {
 
 const removeDistrictBounds = () => {
   amapRef.value.removeDistrictBounds();
-}
+};
 
 const drawGroup = () => {
   amapRef.value.drawGroup();

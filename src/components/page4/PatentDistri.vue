@@ -6,13 +6,13 @@ import patentDistri from "../../../public/js/patentDistri.json";
 //   option: {},
 // });
 let myChart = null;
-const data = patentDistri.map(el => [el.amount, el.patent])
+const data = patentDistri.map((el) => [el.amount, el.patent]);
 const option = {
   tooltip: {
     trigger: "axis",
     formatter: function (params, ticket, callback) {
-      return `企业数量${params[0].data[1]}<br >有效专利数${params[0].data[0]}`
-    }
+      return `企业数量${params[0].data[1]}<br >有效专利数${params[0].data[0]}`;
+    },
   },
   backgroundColor: "rgba(125, 125, 125, 0.1)",
   grid: {
@@ -23,9 +23,9 @@ const option = {
     containLabel: true,
   },
   xAxis: {
-    name: '有效专利数',
+    name: "有效专利数",
     nameGap: 20,
-    nameLocation: 'center',
+    nameLocation: "center",
     axisLabel: {
       fontSize: 8,
     },
@@ -46,9 +46,9 @@ const option = {
     },
   },
   yAxis: {
-    name: '企业数量',
+    name: "企业数量",
     nameGap: 30,
-    nameLocation: 'center',
+    nameLocation: "center",
     axisLabel: {
       fontSize: 8,
     },
@@ -68,11 +68,11 @@ const option = {
   series: [
     {
       data: data,
-      type: 'line',
+      type: "line",
       smooth: true,
       symbolSize: 3,
       itemStyle: {
-        color: 'rgb(245,50,65)'
+        color: "rgb(245,50,65)",
       },
       lineStyle: {
         width: 1,
@@ -83,12 +83,12 @@ const option = {
           color: "rgb(245,50,65)",
         },
         data: [
-          { type: 'max', name: 'Max' },
-          { type: 'min', name: 'Min' }
-        ]
+          { type: "max", name: "Max" },
+          { type: "min", name: "Min" },
+        ],
       },
-    }
-  ]
+    },
+  ],
 };
 
 onMounted(() => {
@@ -121,7 +121,11 @@ p {
   width: 2.415365rem /* 1855/768 */;
   height: 0.126302rem /* 97/768 */;
   line-height: 0.126302rem /* 97/768 */;
-  background-image:linear-gradient(to right, rgba(5, 135, 150, 0.7), rgba(5, 135, 150, 0));
+  background-image: linear-gradient(
+    to right,
+    rgba(5, 135, 150, 0.7),
+    rgba(5, 135, 150, 0)
+  );
 }
 span {
   color: white;

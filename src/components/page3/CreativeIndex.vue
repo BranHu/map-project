@@ -48,9 +48,7 @@ const handleSelect = (e) => {
     <h1>区域创新指数</h1>
     <div class="tab" @click="handleSelect">
       <span data-tab="tab1" :class="{ active: tab1 }">创新竞争力指数</span>
-      <span data-tab="tab2" :class="{ active: tab2 }"
-        >创新要素聚集指数</span
-      >
+      <span data-tab="tab2" :class="{ active: tab2 }">创新要素聚集指数</span>
       <span data-tab="tab3" :class="{ active: tab3 }">创新产出指数</span>
       <span data-tab="tab4" :class="{ active: tab4 }">创新效益指数</span>
     </div>
@@ -193,7 +191,7 @@ const handleSelect = (e) => {
             <span class="icon"></span>
             <span class="text">区域创新竞争力指数</span>
           </p>
-          <div class="data" style="height: .78125rem">
+          <div class="data" style="height: 0.78125rem">
             <div class="img1"></div>
           </div>
         </li>
@@ -224,33 +222,33 @@ const handleSelect = (e) => {
 .creative-index {
   position: absolute;
   width: 2.604167rem /* 2000/768 */;
-  left: .195313rem /* 150/768 */;
-  top: .520833rem /* 400/768 */;
+  left: 0.195313rem /* 150/768 */;
+  top: 0.520833rem /* 400/768 */;
   z-index: 111;
 }
 
 .creative-index h1 {
   text-align: center;
   color: #00e6f0;
-  font-size: .104167rem /* 80/768 */;
-  margin-bottom: .065104rem /* 50/768 */;
+  font-size: 0.104167rem /* 80/768 */;
+  margin-bottom: 0.065104rem /* 50/768 */;
   font-weight: bold;
-  letter-spacing:3px
+  letter-spacing: 3px;
 }
-.creative-index  .tab span.active {
+.creative-index .tab span.active {
   background-color: rgba(0, 135, 150, 0.7);
 }
 
-.creative-index  div.tab {
+.creative-index div.tab {
   display: flex;
   /* background-color: red; */
   justify-content: space-around;
 }
 
-.creative-index  .tab span.active::after {
+.creative-index .tab span.active::after {
   content: "";
   position: absolute;
-  top: .195313rem /* 150/768 */;
+  top: 0.195313rem /* 150/768 */;
   left: 0;
   bottom: 0;
   width: 100%;
@@ -258,17 +256,17 @@ const handleSelect = (e) => {
   background-color: rgba(0, 135, 150, 0.7);
 }
 
-.creative-index  .tab span {
+.creative-index .tab span {
   display: inline-block;
   background-color: rgba(83, 83, 83, 0.7);
   color: #fff;
-  padding: .039063rem /* 30/768 */ .065104rem /* 50/768 */;
+  padding: 0.039063rem /* 30/768 */ 0.065104rem /* 50/768 */;
   cursor: pointer;
 }
 
 .creative-index .content {
   display: flex;
-  margin: .104167rem /* 80/768 */ .026042rem /* 20/768 */;
+  margin: 0.104167rem /* 80/768 */ 0.026042rem /* 20/768 */;
 }
 
 .creative-index .content ul {
@@ -282,21 +280,26 @@ const handleSelect = (e) => {
   display: flex;
   align-items: center;
   width: 100%;
-  height: .130208rem /* 100/768 */;
-  line-height: .130208rem /* 100/768 */;
-  background-image:linear-gradient(to right, rgba(79, 79, 79, 0.2), rgba(220, 220, 220, 0.2));
+  height: 0.130208rem /* 100/768 */;
+  line-height: 0.130208rem /* 100/768 */;
+  background-image: linear-gradient(
+    to right,
+    rgba(79, 79, 79, 0.2),
+    rgba(220, 220, 220, 0.2)
+  );
 }
 
 .creative-index .content div.data {
   display: flex;
   align-items: center;
   width: 100%;
-  height: .78125rem /* 600/768 */;
+  height: 0.78125rem /* 600/768 */;
   background-color: rgba(125, 125, 125, 0.1);
 }
 
-.creative-index .content .tab2 div.data, .creative-index .content .tab3 div.data {
-  height: .585938rem /* 450/768 */;
+.creative-index .content .tab2 div.data,
+.creative-index .content .tab3 div.data {
+  height: 0.585938rem /* 450/768 */;
 }
 
 .creative-index .content .tab4 div.data {
@@ -306,17 +309,17 @@ const handleSelect = (e) => {
 .creative-index .content div.data div {
   width: 100%;
   height: 100%;
-  margin-top: .169271rem /* 130/768 */;
-  margin-left: .130208rem /* 100/768 */;
-  margin-right: .130208rem /* 100/768 */;
+  margin-top: 0.169271rem /* 130/768 */;
+  margin-left: 0.130208rem /* 100/768 */;
+  margin-right: 0.130208rem /* 100/768 */;
   background-size: contain;
   background-repeat: no-repeat;
 }
 .content p.title span.icon {
-  margin-left: .052083rem /* 40/768 */;
-  margin-right: .078125rem /* 60/768 */;
-  width: .078125rem /* 60/768 */;
-  height: .078125rem /* 60/768 */;
+  margin-left: 0.052083rem /* 40/768 */;
+  margin-right: 0.078125rem /* 60/768 */;
+  width: 0.078125rem /* 60/768 */;
+  height: 0.078125rem /* 60/768 */;
   background-color: rgba(0, 135, 150, 1);
 }
 .content p.title span.text {
@@ -378,5 +381,4 @@ const handleSelect = (e) => {
 .creative-index .content .tab4 .img3 {
   background-image: url("/img/page3tab4-3.png");
 }
-
 </style>
