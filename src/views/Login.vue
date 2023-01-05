@@ -97,8 +97,8 @@ h1 {
   font-size: 0.286458rem /* 220/768 */;
   color: #00e6f0;
   font-weight: bold;
-  font-family: "黑体";
-  font-style: italic;
+  font-family: "微软雅黑";
+  /* font-style: italic; */
 }
 
 .login-wrapper {

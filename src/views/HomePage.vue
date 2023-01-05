@@ -14,6 +14,7 @@
     @drawDistrictBounds="drawDistrictBounds"
     @drawGroup="drawGroup"
     @removeGroup="removeGroup"
+    @removeDistrictBounds="removeDistrictBounds"
     @drawIcon="drawIcon"
     @removeIcon="removeIcon"
     @setZoom="setZoom"
@@ -97,7 +98,7 @@ const showPage3 = () => {
   distributionPage.value = true;
   amapRef.value.setZoom(4.5);
   amapRef.value.setCenter([110, 33]);
-  amapRef.value.draw4gaoixng();
+  amapRef.value.draw4gaoxing();
 };
 
 const showPage4 = () => {
@@ -117,6 +118,10 @@ const drawCityBounds = () => {
 const drawDistrictBounds = () => {
   amapRef.value.drawDistrictBounds();
 };
+
+const removeDistrictBounds = () => {
+  amapRef.value.removeDistrictBounds();
+}
 
 const drawGroup = () => {
   amapRef.value.drawGroup();

@@ -82,7 +82,8 @@ function renderEarth(opt, size, target, rotate) {
         color: "#43D0D6",
       },
       itemStyle: {
-        areaColor: "yellow",
+        // areaColor: "#0A82A5",
+        areaColor: "rgb(10, 50, 65)",
         borderWidth: 1, //设置外层边框
         borderColor: "#000c2d",
         //地图区域的多边形 图形样式。
@@ -95,7 +96,7 @@ function renderEarth(opt, size, target, rotate) {
           color: "green",
         },
         itemStyle: {
-          areaColor: "red",
+          areaColor: "rgb(20, 80, 130)",
         },
       },
     },
@@ -148,20 +149,20 @@ function renderEarth(opt, size, target, rotate) {
         enable: true, //是否开启
         SSAO: {
           //环境光遮蔽
-          radius: 1, //环境光遮蔽的采样半径。半径越大效果越自然
-          intensity: 1, //环境光遮蔽的强度
+          radius: 10, //环境光遮蔽的采样半径。半径越大效果越自然
+          intensity: 0.5, //环境光遮蔽的强度
           enable: true,
         },
       },
       // 增加了红色闪电的图层
-      layers: [
-        {
-          type: "blend",
-          blendTo: "emission",
-          texture: contourChart,
-          intensity: config.intensity,
-        },
-      ],
+      // layers: [
+      //   {
+      //     type: "blend",
+      //     blendTo: "emission",
+      //     texture: contourChart,
+      //     intensity: config.intensity,
+      //   },
+      // ],
       viewControl: {
         // 用于鼠标的旋转，缩放等视角控制。
         projection: "perspective", // 投影方式，默认为透视投影'perspective'，也支持设置为正交投影'orthographic'。

@@ -72,6 +72,7 @@ const districtConf = [
 // const belts = [];
 // const axis = [];
 let mapGroup = [];
+let mapDistrict = [];
 const initMap = () => {
   amap = new AMap.Map("amap", {
     center: [114.405188,30.497573],
@@ -131,6 +132,7 @@ const drawDistrictBounds = () => {
       // 画三个区的polygon
       polygons.map((el) => {
         amap.add(el);
+        mapDistrict.push(el);
       });
       // 画东湖高新区的polygon
       // const donghugaoxing = hongshanSeg.concat(jiangxiaSeg).concat(donghugaoxingSeg.reverse())  东湖高新用第一个js的时候要用
@@ -144,8 +146,16 @@ const drawDistrictBounds = () => {
         extData: { id: '东湖高新区' },
       });
       amap.add(polygon);
+      mapDistrict.push(polygon);
     }
   );
+}
+
+const removeDistrictBounds = () => {
+  mapDistrict.map(el => {
+    amap.remove(el);
+  })
+  mapDistrict = []
 }
 
 // 只画东湖高新区的边界
@@ -253,7 +263,7 @@ const removeIcon = () => {
   amap.remove(donghugaoxingMarker)
 }
 
-const draw4gaoixng = () => {
+const draw4gaoxing = () => {
   const icon1 = new AMap.Icon({
     size: new AMap.Size(200, 200),
     image: '/img/hangzhou.png',
@@ -761,9 +771,10 @@ const setCenter = (locat) => {
 defineExpose({
   drawCityBounds,
   drawDistrictBounds,
+  removeDistrictBounds,
   drawIcon,
   removeIcon,
-  draw4gaoixng,
+  draw4gaoxing,
   drawGroup,
   removeGroup,
   drawScatter,

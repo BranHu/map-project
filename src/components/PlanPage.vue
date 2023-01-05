@@ -5,6 +5,7 @@ const emits = defineEmits([
   "playInit",
   "drawCityBounds",
   "drawDistrictBounds",
+  "removeDistrictBounds",
   "drawGroup",
   "removeGroup",
   "drawIcon",
@@ -23,8 +24,13 @@ let plan2035 = ref(false);
 let beltElectronic = ref(false);
 let beltHealth = ref(false);
 let beltIntellect = ref(false);
-let time = ref(3000);
+let time = ref(1000);
 let playStatus = ref(false);
+let stepOne = null;
+let stepTwo = null;
+let stepThree = null;
+let stepFour = null;
+let stepFive = null;
 
 const initFrame = () => {
   plan.value = false;
@@ -38,58 +44,20 @@ const initFrame = () => {
   axis.value = false;
 };
 
-const play1 = () => {
-  emits("playInit");
-  initFrame();
-  playStatus.value = true;
-  // 第一页 要进一步讨论
-  addOne();
-  setTimeout(() => {
-    // 第二页
-    emits("drawDistrictBounds");
-    setTimeout(() => {
-      emits("setZoom", 9);
-      setTimeout(() => {
-        space.value = true;
-        plan.value = false;
-        setTimeout(() => {
-          axis.value = true;
-          setTimeout(() => {
-            axis.value = false;
-            beltElectronic.value = true;
-            beltHealth.value = true;
-            beltIntellect.value = true;
-            strategy.value = true;
-            emits("drawGroup");
-            emits("drawIcon");
-            setTimeout(() => {
-              beltElectronic.value = false;
-              beltHealth.value = false;
-              beltIntellect.value = false;
-              space.value = false;
-              strategy.value = false;
-              plan2025.value = true;
-              plan2035.value = true;
-            }, time.value);
-          }, time.value);
-        }, 1000);
-      }, 2000);
-    }, time.value);
-  }, 3000);
-};
-
-const play = () => {
-  addOne();
-};
-
 const backward = () => {
-  console.log(page.value);
+  clearTimeout(stepOne);
+  clearTimeout(stepTwo);
+  clearTimeout(stepThree);
+  clearTimeout(stepFour);
+  playStatus.value = false;
   switch (page.value) {
     case 0:
+      page.value = 1;
       ElMessage({
-        message: '已经是最前一页',
-        type: 'warning',
-      })
+        message: "已经是最前一页",
+        type: "warning",
+      });
+      clearAll();
       break;
     case 1:
       clearAll();
@@ -113,8 +81,12 @@ const backward = () => {
 };
 
 const forward = () => {
+  clearTimeout(stepOne);
+  clearTimeout(stepTwo);
+  clearTimeout(stepThree);
+  clearTimeout(stepFour);
+  playStatus.value = false;
   page.value++;
-  console.log(page.value);
   switch (page.value) {
     case 1:
       forwardOne();
@@ -132,11 +104,11 @@ const forward = () => {
       forwardFive();
       break;
     case 6:
-      page.value = 5
+      page.value = 5;
       ElMessage({
-        message: '已经是最后一页',
-        type: 'error',
-      })
+        message: "已经是最后一页",
+        type: "error",
+      });
       break;
     default:
       console.log("禁止");
@@ -147,7 +119,7 @@ const forward = () => {
 const clearAll = () => {
   emits("playInit");
   initFrame();
-}
+};
 
 // 第一页
 const forwardOne = () => {
@@ -159,7 +131,7 @@ const forwardOne = () => {
 };
 
 const backwardOne = () => {
-  // emits("removeDistrictBounds"); 2023.1.4
+  emits("removeDistrictBounds");
   emits("setZoom", 8);
 };
 
@@ -220,41 +192,27 @@ const forwardFive = () => {
   plan2035.value = true;
 };
 
-// 第二页
-const pageTwo = (fn) => {
-  setTimeout(() => {
-    // amap.value.drawDistrictBounds();
-    fn();
+const play = () => {
+  emits("playInit");
+  initFrame();
+  playStatus.value = true;
+  forwardOne();
+  stepOne = setTimeout(() => {
+    forwardTwo();
+    console.log(1);
+    stepTwo = setTimeout(() => {
+      forwardThree();
+      console.log(2);
+      stepThree = setTimeout(() => {
+        forwardFour();
+        console.log(3);
+        stepFour = setTimeout(() => {
+          forwardFive();
+          console.log(4);
+        }, 3000);
+      }, 3000);
+    }, 3000);
   }, 3000);
-};
-
-const stopPageTwo = () => {
-  clearTimeout(pageTwo);
-};
-
-// 第三页
-const pageThree = (fn) => {
-  setTimeout(() => {
-    amap.value.setZoom(9);
-    fn();
-  }, 3000);
-};
-
-const stopPageThree = () => {
-  clearTimeout(pageThree);
-};
-
-// 第四页
-const pageFour = (fn) => {
-  setTimeout(() => {
-    space.value = true;
-    plan.value = false;
-    fn();
-  }, 3000);
-};
-
-const stopPageFour = () => {
-  clearTimeout(pageFour);
 };
 </script>
 <template>
@@ -439,7 +397,7 @@ const stopPageFour = () => {
   box-sizing: border-box;
   outline: 0;
   transition: 0.1s;
-  background-color: #00e6f0;
+  /* background-color: #00e6f0; */
   opacity: 0.5;
   vertical-align: middle;
   border-radius: 4px;
