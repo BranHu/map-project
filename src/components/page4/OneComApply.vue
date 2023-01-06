@@ -1,18 +1,18 @@
 <script setup>
 import * as echarts from "echarts";
-import { onMounted, toRefs, watch } from "vue";
+import { onMounted, watch } from "vue";
 
 const props = defineProps({
-  apply:{
+  apply: {
     type: Array,
-    default: []
+    default: [],
   },
 });
 
-const renderChart =  (data) => {
-  const axisData = data.map(el => el.year)
-  const rejectData = data.map(el => el.apply - el.grant)
-  const grantData = data.map(el => el.grant)
+const renderChart = (data) => {
+  const axisData = data.map((el) => el.year);
+  const rejectData = data.map((el) => el.apply - el.grant);
+  const grantData = data.map((el) => el.grant);
   const option = {
     grid: {
       left: "5%",
@@ -22,10 +22,13 @@ const renderChart =  (data) => {
       containLabel: true,
     },
     legend: {
-      data: ['授权量', '申请量']
+      textStyle: {
+        color: "#fff",
+      },
+      data: ["授权量", "申请量"],
     },
     xAxis: {
-      type: 'category',
+      type: "category",
       data: axisData,
       axisLine: {
         show: false,
@@ -62,10 +65,10 @@ const renderChart =  (data) => {
     },
     series: [
       {
-        name: '授权量',
+        name: "授权量",
         data: grantData,
-        type: 'bar',
-        stack: 'apply',
+        type: "bar",
+        stack: "apply",
         // barWidth: "40%",
         // showBackground: true,
         // backgroundStyle: {
@@ -77,27 +80,36 @@ const renderChart =  (data) => {
         //     { offset: 1, color: "rgb(5,135,150)" },
         //   ]),
         // },
+        itemStyle: {
+          color: "rgb(5,135,150)",
+        },
       },
       {
-        name: '申请量',
+        name: "申请量",
         data: rejectData,
-        type: 'bar',
-        stack: 'apply',
-      }
-    ]
+        type: "bar",
+        stack: "apply",
+        itemStyle: {
+          color: "rgb(0,230,240)",
+        },
+      },
+    ],
   };
   myChart.setOption(option);
-}
+};
 
-watch(() => props.apply, (newVal,oldVal) => {
-  renderChart(newVal)
-})
+watch(
+  () => props.apply,
+  (newVal, oldVal) => {
+    renderChart(newVal);
+  }
+);
 
 let myChart = null;
 
 onMounted(() => {
   myChart = echarts.init(document.getElementById("OneComApply"));
-  renderChart(props.apply)
+  renderChart(props.apply);
 });
 </script>
 
@@ -127,7 +139,11 @@ p {
   height: 0.126302rem /* 97/768 */;
   line-height: 0.126302rem /* 97/768 */;
   /* background-color: rgba(5, 135, 150, 0.7); */
-  background-image:linear-gradient(to right, rgba(5, 135, 150, 0.7), rgba(5, 135, 150, 0));
+  background-image: linear-gradient(
+    to right,
+    rgba(5, 135, 150, 0.7),
+    rgba(5, 135, 150, 0)
+  );
 }
 span {
   color: white;

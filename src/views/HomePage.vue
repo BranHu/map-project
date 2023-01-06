@@ -31,11 +31,11 @@
   <DistributionPage v-if="distributionPage" />
 
   <!------------------------------------------------ 重点产业页面 -------------------------------------------------->
-  <LeadingPage v-if="leadingPage" />
+  <LeadingPage v-if="leadingPage" @drawScatter="drawScatter" />
 </template>
 <script setup>
 import "animate.css";
-import { onMounted, ref, reactive } from "vue";
+import { onMounted, ref } from "vue";
 
 const amapRef = ref(null);
 //创新资源
@@ -109,6 +109,11 @@ const showPage4 = () => {
   amapRef.value.setCenter([114.48, 30.42]);
   amapRef.value.drawOnlyDonghu();
   amapRef.value.drawPage4Scatter();
+};
+
+const drawScatter = (type) => {
+  console.log(type, 2);
+  // amapRef.value.drawScatter();
 };
 
 const drawCityBounds = () => {

@@ -18,49 +18,50 @@ const pieOption = {
   //   },
   // },
   series: {
-      type: 'pie',
-      radius: ["50%", "70%"],
-      // top: 'center',
-      // height: '100%',
-      left: 'center',
-      // width: 400,
-      itemStyle: {
-        borderColor: '#fff',
-        borderWidth: 1
-      },
-      label: {
-        alignTo: 'edge',
-        formatter: '{b}\n企业数量{c}',
-        minMargin: 5,
-        edgeDistance: 10,
-        lineHeight: 15,
-        fontSize: 9,
-        color: '#00e6f0'
-        // rich: {
-        //   time: {
-        //     fontSize: 6,
-        //     color: '#999'
-        //   }
-        // }
-      },
-      labelLine: {
-        length: 15,
-        length2: 0,
-        maxSurfaceAngle: 80
-      },
-      labelLayout: function (params) {
-        const isLeft = params.labelRect.x < pieChart.getWidth() / 2;
-        const points = params.labelLinePoints;
-        // Update the end point.
-        points[2][0] = isLeft
-          ? params.labelRect.x
-          : params.labelRect.x + params.labelRect.width;
-        return {
-          labelLinePoints: points
-        };
-      },
-      data: companyClassData
-    }
+    type: "pie",
+    radius: ["50%", "70%"],
+    // top: 'center',
+    // height: '100%',
+    left: "center",
+    // width: 400,
+    itemStyle: {
+      borderRadius: 5,
+      borderColor: "#fff",
+      borderWidth: 0,
+    },
+    label: {
+      alignTo: "edge",
+      formatter: "{b}\n企业数量{c}",
+      minMargin: 5,
+      edgeDistance: 10,
+      lineHeight: 15,
+      fontSize: 9,
+      color: "#00e6f0",
+      // rich: {
+      //   time: {
+      //     fontSize: 6,
+      //     color: '#999'
+      //   }
+      // }
+    },
+    labelLine: {
+      length: 15,
+      length2: 0,
+      maxSurfaceAngle: 80,
+    },
+    labelLayout: function (params) {
+      const isLeft = params.labelRect.x < pieChart.getWidth() / 2;
+      const points = params.labelLinePoints;
+      // Update the end point.
+      points[2][0] = isLeft
+        ? params.labelRect.x
+        : params.labelRect.x + params.labelRect.width;
+      return {
+        labelLinePoints: points,
+      };
+    },
+    data: companyClassData,
+  },
 };
 
 onMounted(() => {
@@ -93,7 +94,7 @@ onMounted(() => {
   display: flex;
   flex-direction: row;
 }
-#CompanyClass{
+#CompanyClass {
   width: 100%;
   height: 100%;
 }
@@ -101,7 +102,11 @@ p {
   width: 2.415365rem /* 1855/768 */;
   height: 0.126302rem /* 97/768 */;
   line-height: 0.126302rem /* 97/768 */;
-  background-image:linear-gradient(to right, rgba(5, 135, 150, 0.7), rgba(5, 135, 150, 0));
+  background-image: linear-gradient(
+    to right,
+    rgba(5, 135, 150, 0.7),
+    rgba(5, 135, 150, 0)
+  );
 }
 span {
   color: white;

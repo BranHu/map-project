@@ -101,7 +101,7 @@ const pieOption = {
       type: "pie",
       radius: ["50%", "70%"],
       left: 0,
-      right: '75%',
+      right: "75%",
       top: 0,
       bottom: 0,
       avoidLabelOverlap: false,
@@ -166,8 +166,8 @@ const pieOption = {
       name: "Access From",
       type: "pie",
       radius: ["50%", "70%"],
-      left: '25%',
-      right: '50%',
+      left: "25%",
+      right: "50%",
       top: 0,
       bottom: 0,
       avoidLabelOverlap: false,
@@ -232,8 +232,8 @@ const pieOption = {
       name: "Access From",
       type: "pie",
       radius: ["50%", "70%"],
-      left: '50%',
-      right: '25%',
+      left: "50%",
+      right: "25%",
       top: 0,
       bottom: 0,
       avoidLabelOverlap: false,
@@ -298,7 +298,7 @@ const pieOption = {
       name: "Access From",
       type: "pie",
       radius: ["50%", "70%"],
-      left: '75%',
+      left: "75%",
       right: 0,
       top: 0,
       bottom: 0,
@@ -408,7 +408,11 @@ p {
   width: 2.21875rem /* 1704/768 */;
   height: 0.126302rem /* 97/768 */;
   line-height: 0.126302rem /* 97/768 */;
-  background-image:linear-gradient(to right, rgba(5, 135, 150, 0.7), rgba(5, 135, 150, 0));
+  background-image: linear-gradient(
+    to right,
+    rgba(5, 135, 150, 0.7),
+    rgba(5, 135, 150, 0)
+  );
 }
 span {
   color: white;

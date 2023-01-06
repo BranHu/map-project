@@ -1,73 +1,91 @@
 <script setup>
 import * as echarts from "echarts";
-import { onMounted } from "vue";
+import { onMounted, ref } from "vue";
+import patentDistri from "../../../public/js/patentDistri.json";
 // defineProps({
 //   option: {},
 // });
 let myChart = null;
-
+const data = patentDistri.map((el) => [el.amount, el.patent]);
 const option = {
+  tooltip: {
+    trigger: "axis",
+    formatter: function (params, ticket, callback) {
+      return `企业数量${params[0].data[1]}<br >有效专利数${params[0].data[0]}`;
+    },
+  },
+  backgroundColor: "rgba(125, 125, 125, 0.1)",
   grid: {
     left: "5%",
-    right: "5%",
-    bottom: "5%",
-    top: "5%",
+    right: "2%",
+    bottom: "8%",
+    top: "20%",
     containLabel: true,
   },
   xAxis: {
-    type: "value",
-    splitLine: {
-      show: false,
-      lineStyle: {
-        color: "blue",
-      },
-    },
-    axisLine: {
-      show: false,
-      lineStyle: {
-        color: "rgb(15,150,170)",
-      },
-    },
+    name: "有效专利数",
+    nameGap: 20,
+    nameLocation: "center",
     axisLabel: {
       fontSize: 8,
-    },
-  },
-  yAxis: {
-    type: "category",
-    data: [
-      "有效专利数1-5",
-      "有效专利数6-10",
-      "有效专利数11-50",
-      "有效专利数>50",
-    ],
-    axisLine: {
-      show: false,
-      lineStyle: {
-        color: "rgb(15,150,170)",
-      },
-    },
-    axisLabel: {
-      fontSize: 8,
-      padding: [0, 6],
     },
     axisTick: {
       show: false,
     },
+    axisLine: {
+      // show: true,
+      lineStyle: {
+        // color: "rgb(15,150,170)",
+      },
+    },
+    splitLine: {
+      show: false,
+      lineStyle: {
+        // color: "red",
+      },
+    },
+  },
+  yAxis: {
+    name: "企业数量",
+    nameGap: 30,
+    nameLocation: "center",
+    axisLabel: {
+      fontSize: 8,
+    },
+    axisLine: {
+      // show: true,
+      lineStyle: {
+        // color: "rgb(15,150,170)",
+      },
+    },
+    splitLine: {
+      show: false,
+      lineStyle: {
+        // color: "red",
+      },
+    },
   },
   series: [
     {
-      data: [1949, 204, 199, 39],
-      type: "bar",
-      barWidth: "40%",
-      showBackground: true,
-      backgroundStyle: {
-        color: "rgba(255,255,255, 0.1)",
-      },
+      data: data,
+      type: "line",
+      smooth: true,
+      symbolSize: 3,
       itemStyle: {
-        color: new echarts.graphic.LinearGradient(1, 0, 0, 0, [
-          { offset: 0, color: "rgb(0,230,240)" },
-          { offset: 1, color: "rgb(5,135,150)" },
-        ]),
+        color: "rgb(245,50,65)",
+      },
+      lineStyle: {
+        width: 1,
+        color: "rgb(245,50,65)",
+      },
+      markPoint: {
+        itemStyle: {
+          color: "rgb(245,50,65)",
+        },
+        data: [
+          { type: "max", name: "Max" },
+          { type: "min", name: "Min" },
+        ],
       },
     },
   ],

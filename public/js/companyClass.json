@@ -2,26 +2,41 @@
   {
     "index": 1.0,
     "name": "1级",
-    "value": 6.0
+    "value": 6.0,
+    "itemStyle": {
+      "color": "rgb(10,120,145)"
+    }
   },
   {
     "index": 2.0,
     "name": "2级",
-    "value": 9.0
+    "value": 9.0,
+    "itemStyle": {
+      "color": "rgb(90,190,235)"
+    }
   },
   {
     "index": 3.0,
     "name": "3级",
-    "value": 26.0
+    "value": 26.0,
+    "itemStyle": {
+      "color": "rgb(60,180,210)"
+    }
   },
   {
     "index": 4.0,
     "name": "4级",
-    "value": 196.0
+    "value": 196.0,
+    "itemStyle": {
+      "color": "rgb(22,150,180)"
+    }
   },
   {
     "index": 5.0,
     "name": "5级",
-    "value": 2154.0
+    "value": 2154.0,
+    "itemStyle": {
+      "color": "rgb(10,120,145)"
+    }
   }
 ]

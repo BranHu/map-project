@@ -1,5 +1,5 @@
 <script setup>
-import { onMounted, ref, reactive } from "vue";
+import { ref } from "vue";
 
 const emits = defineEmits([
   "playInit",
@@ -24,13 +24,11 @@ let plan2035 = ref(false);
 let beltElectronic = ref(false);
 let beltHealth = ref(false);
 let beltIntellect = ref(false);
-let time = ref(1000);
 let playStatus = ref(false);
 let stepOne = null;
 let stepTwo = null;
 let stepThree = null;
 let stepFour = null;
-let stepFive = null;
 
 const initFrame = () => {
   plan.value = false;

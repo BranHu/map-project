@@ -4,9 +4,9 @@ import { onMounted, watch } from "vue";
 import companyClassData from "../../../public/js/companyClass.json";
 
 const props = defineProps({
-  pie:{
+  pie: {
     type: Object,
-    default: {}
+    default: {},
   },
 });
 
@@ -38,21 +38,25 @@ const renderChart = (data) => {
       // },
     ],
     legend: {
-      top: '2%',
-      left: 'center'
+      top: "2%",
+      left: "center",
+      textStyle: {
+        color: "#fff",
+      },
     },
     series: [
       {
-        type: 'pie',
+        type: "pie",
         radius: ["50%", "70%"],
         left: 0,
-        right: '50%',
+        right: "50%",
         top: 0,
         bottom: 0,
         // width: 400,
         itemStyle: {
-          borderColor: '#fff',
-          borderWidth: 1
+          borderRadius: 2,
+          borderColor: "#fff",
+          borderWidth: 0,
         },
         label: {
           show: false,
@@ -60,19 +64,21 @@ const renderChart = (data) => {
         labelLine: {
           length: 15,
           length2: 0,
-          maxSurfaceAngle: 80
+          maxSurfaceAngle: 80,
         },
-        data: data.status
-      }, {
-        type: 'pie',
+        data: data.status,
+      },
+      {
+        type: "pie",
         radius: ["50%", "70%"],
-        left: '50%',
+        left: "50%",
         right: 0,
         top: 0,
         bottom: 0,
         itemStyle: {
-          borderColor: '#fff',
-          borderWidth: 1
+          borderRadius: 2,
+          borderColor: "#fff",
+          borderWidth: 0,
         },
         label: {
           show: false,
@@ -80,22 +86,25 @@ const renderChart = (data) => {
         labelLine: {
           length: 15,
           length2: 0,
-          maxSurfaceAngle: 80
+          maxSurfaceAngle: 80,
         },
-        data: data.type
-      }
-    ]
+        data: data.type,
+      },
+    ],
   };
   myChart.setOption(option);
-}
+};
 
-watch(() => props.pie, (newVal,oldVal) => {
-  renderChart(newVal)
-})
+watch(
+  () => props.pie,
+  (newVal, oldVal) => {
+    renderChart(newVal);
+  }
+);
 
 onMounted(() => {
   myChart = echarts.init(document.getElementById("OneComPie"));
-  renderChart(props.pie)
+  renderChart(props.pie);
 });
 </script>
 
@@ -123,7 +132,7 @@ onMounted(() => {
   display: flex;
   flex-direction: row;
 }
-#OneComPie{
+#OneComPie {
   width: 100%;
   height: 100%;
 }
@@ -131,7 +140,11 @@ p {
   width: 2.415365rem /* 1855/768 */;
   height: 0.126302rem /* 97/768 */;
   line-height: 0.126302rem /* 97/768 */;
-  background-image:linear-gradient(to right, rgba(5, 135, 150, 0.7), rgba(5, 135, 150, 0));
+  background-image: linear-gradient(
+    to right,
+    rgba(5, 135, 150, 0.7),
+    rgba(5, 135, 150, 0)
+  );
 }
 span {
   color: white;

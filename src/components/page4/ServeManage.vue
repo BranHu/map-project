@@ -1,6 +1,7 @@
 <script setup>
 import { onMounted, ref } from "vue";
 import serverData from "../../../public/js/server.json";
+import { Search } from "@element-plus/icons-vue";
 // import { Vue3SeamlessScroll } from "vue3-seamless-scroll";
 // defineProps({
 //   option: {},
@@ -12,6 +13,7 @@ const tab2 = ref(false);
 const tab3 = ref(false);
 const tab4 = ref(false);
 const tab5 = ref(false);
+const input = ref("");
 
 const rowClick = (row) => {
   emits("getRow", row);
@@ -75,7 +77,7 @@ const handleSelect = (e) => {
         class="manage"
         :data="tableData"
         style="width: 100%"
-        height="700"
+        height="650"
         :header-cell-style="{
           background: '#058796',
           color: '#fff',
@@ -96,6 +98,10 @@ const handleSelect = (e) => {
         </el-table-column>
         <el-table-column prop="grade" label="分级"> </el-table-column>
       </el-table>
+    </div>
+
+    <div class="search-wrapper">
+      <el-input v-model="input" :prefix-icon="Search" />
     </div>
   </div>
 </template>
@@ -143,23 +149,44 @@ div.table-wrapper {
   font-family: "黑体";
   z-index: 111;
   margin-top: 0.104167rem /* 80/768 */;
+  background-color: rgba(125, 125, 125, 0.1);
 }
 
 div.table-wrapper .el-table th,
 .el-table tr,
 .el-table td {
-  background-color: rgba(125, 125, 125, 0.1);
+  background-color: transparent;
 }
 div.table-wrapper .el-table {
   background-color: transparent;
-}
-div.table-wrapper .el-table td {
-  border-bottom: 1px dashed rgba(255, 255, 255, 0.5);
 }
 
 /*表格鼠标悬停的样式（背景颜色）*/
 div.table-wrapper .el-table tbody tr:hover > td {
   background-color: #058796 !important;
   /* background-color: rgba(125, 125, 125, 0.1) !important; */
+}
+
+div.table-wrapper .el-table th.el-table__cell.is-leaf {
+  border-bottom: 0px;
+}
+
+div.table-wrapper .el-table td {
+  border-bottom: 1px dashed rgba(255, 255, 255, 0.5);
+}
+
+div.table-wrapper .el-table__inner-wrapper::before {
+  height: 0px;
+}
+
+div.search-wrapper {
+  padding: 0.065104rem /* 50/768 */;
+  background-color: rgba(125, 125, 125, 0.1);
+}
+
+div.search-wrapper .el-input__wrapper {
+  background-color: rgba(125, 125, 125, 0.2);
+  /* border: 1px solid rgba(255, 255, 255, 0.5); */
+  /* border-radius: opx; */
 }
 </style>

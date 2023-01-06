@@ -107,7 +107,11 @@ p {
   height: 0.126302rem /* 97/768 */;
   line-height: 0.126302rem /* 97/768 */;
   /* background-color: rgba(5, 135, 150, 0.7); */
-  background-image:linear-gradient(to right, rgba(5, 135, 150, 0.7), rgba(5, 135, 150, 0));
+  background-image: linear-gradient(
+    to right,
+    rgba(5, 135, 150, 0.7),
+    rgba(5, 135, 150, 0)
+  );
 }
 span {
   color: white;

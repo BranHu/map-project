@@ -1,5 +1,12 @@
 <script setup>
-import { onMounted, ref, reactive } from "vue";
+import { ref } from "vue";
+
+const emits = defineEmits(["drawScatter"]);
+
+const drawScatter = (type) => {
+  console.log(type, 1);
+  emits("drawScatter", type);
+};
 </script>
 <template>
   <StackedLine />
@@ -12,9 +19,7 @@ import { onMounted, ref, reactive } from "vue";
 
   <BarChart />
 
-  <PointSelect />
+  <PointSelect @drawScatter="drawScatter" />
 </template>
 
-<style scoped>
-
-</style>
+<style scoped></style>

@@ -1,35 +1,38 @@
 <script setup>
 import * as echarts from "echarts";
-import { onMounted, toRefs, watch } from "vue";
+import { onMounted, watch } from "vue";
 
 const props = defineProps({
-  field:{
+  field: {
     type: Array,
-    default: []
+    default: [],
   },
 });
 
-const renderChart =  (data) => {
-  const axisData = data.map(el => el.name)
-  const valueData = data.map(el => el.value)
+const renderChart = (data) => {
+  const axisData = data.map((el) => el.name);
+  const valueData = data.map((el) => el.value);
   const option = {
     grid: {
       left: "5%",
       right: "5%",
       bottom: "5%",
-      // top: "10%",
+      top: "5%",
       containLabel: true,
     },
     // legend: {
     //   data: ['授权量', '申请量']
     // },
     xAxis: {
-      type: 'value',
+      type: "value",
       axisLine: {
         show: false,
         lineStyle: {
           color: "rgb(15,150,170)",
         },
+      },
+      splitLine: {
+        show: false,
       },
       axisLabel: {
         fontSize: 8,
@@ -58,38 +61,44 @@ const renderChart =  (data) => {
           color: "rgb(15,150,170)",
         },
       },
+      axisTick: {
+        show: false,
+      },
     },
     series: [
       {
         // name: '',
         data: valueData,
-        type: 'bar',
-        // barWidth: "40%",
-        // showBackground: true,
-        // backgroundStyle: {
-        //   color: "rgba(255,255,255, 0.1)",
-        // },
-        // itemStyle: {
-        //   color: new echarts.graphic.LinearGradient(1, 0, 0, 0, [
-        //     { offset: 0, color: "rgb(0,230,240)" },
-        //     { offset: 1, color: "rgb(5,135,150)" },
-        //   ]),
-        // },
-      }
-    ]
+        type: "bar",
+        barWidth: "40%",
+        showBackground: true,
+        backgroundStyle: {
+          color: "rgba(255,255,255, 0.1)",
+        },
+        itemStyle: {
+          color: new echarts.graphic.LinearGradient(1, 0, 0, 0, [
+            { offset: 0, color: "rgb(0,230,240)" },
+            { offset: 1, color: "rgb(5,135,150)" },
+          ]),
+        },
+      },
+    ],
   };
   myChart.setOption(option);
-}
+};
 
-watch(() => props.field, (newVal,oldVal) => {
-  renderChart(newVal)
-})
+watch(
+  () => props.field,
+  (newVal, oldVal) => {
+    renderChart(newVal);
+  }
+);
 
 let myChart = null;
 
 onMounted(() => {
   myChart = echarts.init(document.getElementById("OneComField"));
-  renderChart(props.field)
+  renderChart(props.field);
 });
 </script>
 
@@ -106,7 +115,7 @@ onMounted(() => {
 .barChart {
   position: absolute;
   right: 0.233073rem /* 179/768 */;
-  bottom: .195313rem /* 150/768 */;
+  bottom: 0.195313rem /* 150/768 */;
   background-color: rgba(125, 125, 125, 0.1);
   z-index: 111;
 }
@@ -119,7 +128,11 @@ p {
   height: 0.126302rem /* 97/768 */;
   line-height: 0.126302rem /* 97/768 */;
   /* background-color: rgba(5, 135, 150, 0.7); */
-  background-image:linear-gradient(to right, rgba(5, 135, 150, 0.7), rgba(5, 135, 150, 0));
+  background-image: linear-gradient(
+    to right,
+    rgba(5, 135, 150, 0.7),
+    rgba(5, 135, 150, 0)
+  );
 }
 span {
   color: white;

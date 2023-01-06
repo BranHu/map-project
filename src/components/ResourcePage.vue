@@ -1,5 +1,5 @@
 <script setup>
-import { onMounted, ref, reactive } from "vue";
+import { ref } from "vue";
 import oneComApply1 from "../../public/js/oneComApply1.json";
 import oneComApply2 from "../../public/js/oneComApply2.json";
 import oneComField1 from "../../public/js/oneComField1.json";
@@ -24,14 +24,50 @@ const getManageRow = (row) => {
     oneComApply.value = oneComApply1;
     oneComPie.value = {
       status: [
-        { value: 2480, name: "有效" },
-        { value: 1728, name: "失效" },
-        { value: 860, name: "审中" },
+        {
+          value: 2480,
+          name: "有效",
+          itemStyle: {
+            color: "rgb(10,120,145)",
+          },
+        },
+        {
+          value: 1728,
+          name: "失效",
+          itemStyle: {
+            color: "rgb(22,150,180)",
+          },
+        },
+        {
+          value: 860,
+          name: "审中",
+          itemStyle: {
+            color: "rgb(60,180,210)",
+          },
+        },
       ],
       type: [
-        { value: 4859, name: "发明" },
-        { value: 206, name: "实用新型" },
-        { value: 3, name: "外观设计" },
+        {
+          value: 4859,
+          name: "发明",
+          itemStyle: {
+            color: "rgb(90,190,235)",
+          },
+        },
+        {
+          value: 206,
+          name: "实用新型",
+          itemStyle: {
+            color: "rgb(115,190,220)",
+          },
+        },
+        {
+          value: 3,
+          name: "外观设计",
+          itemStyle: {
+            color: "rgb(20,180,210)",
+          },
+        },
       ],
     };
     oneComField.value = oneComField1;
@@ -39,14 +75,50 @@ const getManageRow = (row) => {
     oneComApply.value = oneComApply2;
     oneComPie.value = {
       status: [
-        { value: 2916, name: "有效" },
-        { value: 770, name: "失效" },
-        { value: 614, name: "审中" },
+        {
+          value: 2916,
+          name: "有效",
+          itemStyle: {
+            color: "rgb(10,120,145)",
+          },
+        },
+        {
+          value: 770,
+          name: "失效",
+          itemStyle: {
+            color: "rgb(22,150,180)",
+          },
+        },
+        {
+          value: 614,
+          name: "审中",
+          itemStyle: {
+            color: "rgb(60,180,210)",
+          },
+        },
       ],
       type: [
-        { value: 3395, name: "发明" },
-        { value: 544, name: "实用新型" },
-        { value: 334, name: "外观设计" },
+        {
+          value: 3395,
+          name: "发明",
+          itemStyle: {
+            color: "rgb(90,190,235)",
+          },
+        },
+        {
+          value: 544,
+          name: "实用新型",
+          itemStyle: {
+            color: "rgb(115,190,220)",
+          },
+        },
+        {
+          value: 334,
+          name: "外观设计",
+          itemStyle: {
+            color: "rgb(20,180,210)",
+          },
+        },
       ],
     };
     oneComField.value = oneComField2;
@@ -68,5 +140,3 @@ const getManageRow = (row) => {
 
   <OneComField v-if="oneCompany" :field="oneComField" />
 </template>
-
-<style scoped></style>
