@@ -1,7 +1,7 @@
 <script setup>
 import { ref } from "vue";
 
-const emits = defineEmits(["drawScatter"]);
+const emits = defineEmits(["drawScatter", "clearScatter"]);
 
 const tab1 = ref(false);
 const tab2 = ref(false);
@@ -29,6 +29,7 @@ const industrialSelect = (e) => {
   console.log(e.target.className);
   if (e.target.className !== "point-wrapper") {
     setFalse();
+    emits("clearScatter");
     emits("drawScatter", e.target.dataset.tab);
     switch (e.target.dataset.tab) {
       case "新材料产业":

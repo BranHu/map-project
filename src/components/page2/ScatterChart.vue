@@ -1,9 +1,10 @@
 <script setup>
 import * as echarts from "echarts";
-import { onMounted } from "vue";
+import { onMounted, ref } from "vue";
 // defineProps({
 //   option: {},
 // });
+const detail = ref("1111111");
 
 const option = {
   // title: {
@@ -335,7 +336,7 @@ onMounted(() => {
   <div
     class="scatter-chart animate__animated animate__fadeInDown animate__delay-0.6s"
   >
-    <p><span>产业技术分布</span></p>
+    <TitlePover :detail="detail" />
     <div id="scatter"></div>
   </div>
 </template>
@@ -351,16 +352,5 @@ onMounted(() => {
 #scatter {
   width: 2.415365rem /* 1855/768 */;
   height: 1.296875rem /* 996/768 */;
-}
-p {
-  width: 2.415365rem /* 1855/768 */;
-  height: 0.126302rem /* 97/768 */;
-  line-height: 0.126302rem /* 97/768 */;
-  background-image:linear-gradient(to right, rgba(5, 135, 150, 0.7), rgba(5, 135, 150, 0));
-}
-span {
-  color: white;
-  font-size: 0.048177rem /* 37/768 */;
-  margin-left: 0.130208rem /* 100/768 */;
 }
 </style>

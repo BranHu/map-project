@@ -1,11 +1,13 @@
 <script setup>
 import { ref } from "vue";
 
-const emits = defineEmits(["drawScatter"]);
+const emits = defineEmits(["drawScatter", "clearScatter"]);
 
 const drawScatter = (type) => {
-  console.log(type, 1);
   emits("drawScatter", type);
+};
+const clearScatter = () => {
+  emits("clearScatter");
 };
 </script>
 <template>
@@ -19,7 +21,7 @@ const drawScatter = (type) => {
 
   <BarChart />
 
-  <PointSelect @drawScatter="drawScatter" />
+  <PointSelect @drawScatter="drawScatter" @clearScatter="clearScatter" />
 </template>
 
 <style scoped></style>

@@ -1,5 +1,5 @@
 <script setup>
-import { onMounted, ref } from "vue";
+import { ref } from "vue";
 import serverData from "../../../public/js/server.json";
 import { Search } from "@element-plus/icons-vue";
 // import { Vue3SeamlessScroll } from "vue3-seamless-scroll";
@@ -18,6 +18,11 @@ const input = ref("");
 const rowClick = (row) => {
   emits("getRow", row);
 };
+
+const inputSearch = () => {
+  const result = serverData.filter(el => el.company === input.value)
+  tableData.value = result
+}
 
 const handleSelect = (e) => {
   switch (e.target.dataset.tab) {
@@ -60,6 +65,8 @@ const handleSelect = (e) => {
       break;
   }
 };
+
+
 </script>
 
 <template>
@@ -69,7 +76,7 @@ const handleSelect = (e) => {
       <span data-tab="tab2" :class="{ active: tab2 }">人才</span>
       <span data-tab="tab3" :class="{ active: tab3 }">创新平台</span>
       <span data-tab="tab4" :class="{ active: tab4 }">高校</span>
-      <span data-tab="tab5" :class="{ active: tab4 }">知识产权</span>
+      <span data-tab="tab5" :class="{ active: tab5 }">知识产权</span>
     </div>
 
     <div class="table-wrapper">
@@ -101,7 +108,7 @@ const handleSelect = (e) => {
     </div>
 
     <div class="search-wrapper">
-      <el-input v-model="input" :prefix-icon="Search" />
+      <el-input v-model="input" :prefix-icon="Search" @change="inputSearch"/>
     </div>
   </div>
 </template>

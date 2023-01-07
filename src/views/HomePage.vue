@@ -31,7 +31,11 @@
   <DistributionPage v-if="distributionPage" />
 
   <!------------------------------------------------ 重点产业页面 -------------------------------------------------->
-  <LeadingPage v-if="leadingPage" @drawScatter="drawScatter" />
+  <LeadingPage
+    v-if="leadingPage"
+    @drawScatter="drawScatter"
+    @clearScatter="clearScatter"
+  />
 </template>
 <script setup>
 import "animate.css";
@@ -112,8 +116,8 @@ const showPage4 = () => {
 };
 
 const drawScatter = (type) => {
-  console.log(type, 2);
-  // amapRef.value.drawScatter();
+  // console.log(type, 2);
+  amapRef.value.drawScatter(type);
 };
 
 const drawCityBounds = () => {
@@ -149,6 +153,10 @@ const setZoom = (size) => {
 };
 const playInit = () => {
   amapRef.value.removeAllOverlay();
+  amapRef.value.clearScatter();
+};
+
+const clearScatter = () => {
   amapRef.value.clearScatter();
 };
 onMounted(() => {});

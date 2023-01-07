@@ -4,7 +4,6 @@ import { onMounted, ref } from "vue";
 // defineProps({
 //   option: {},
 // });
-const dialogVisible = ref(false)
 const option = {
   // title: {
   //   text: '专利申请趋势',
@@ -17,7 +16,13 @@ const option = {
     trigger: "axis",
   },
   legend: {
-    data: ["新材料产业", "新能源产业", "生物产业", "节能环保产业", "高端装备制造产业"],
+    data: [
+      "新材料产业",
+      "新能源产业",
+      "生物产业",
+      "节能环保产业",
+      "高端装备制造产业",
+    ],
     // orient: 'vertical',
     // align: 'right',
     top: "7%",
@@ -46,7 +51,15 @@ const option = {
   xAxis: {
     type: "category",
     boundaryGap: false,
-    data: ["新材料产业", "新材料产业", "新材料产业", "新材料产业", "新材料产业", "新材料产业", "新材料产业"],
+    data: [
+      "新材料产业",
+      "新材料产业",
+      "新材料产业",
+      "新材料产业",
+      "新材料产业",
+      "新材料产业",
+      "新材料产业",
+    ],
     axisLabel: {
       fontSize: 6,
     },
@@ -148,6 +161,8 @@ const option = {
   ],
 };
 
+const detail = ref("99999999");
+
 onMounted(() => {
   const myChart = echarts.init(document.getElementById("line"));
   myChart.setOption(option);
@@ -158,12 +173,12 @@ onMounted(() => {
   <div
     class="StackedLine animate__animated animate__fadeInDown animate__delay-0.6s"
   >
-    <p @click="dialogVisible = true"><span>产业技术分布</span></p>
+    <TitlePover :detail="detail" :left="true" />
     <div id="line"></div>
   </div>
-  <el-dialog v-model="dialogVisible" title="产业" width="30%" draggable>
+  <!-- <el-dialog v-model="dialogVisible" title="产业" width="30%" draggable>
     <span>内容显示</span>
-  </el-dialog>
+  </el-dialog> -->
 </template>
 
 <style scoped>
@@ -176,16 +191,5 @@ onMounted(() => {
 #line {
   width: 2.415365rem /* 1855/768 */;
   height: 1.041667rem /* 800/768 */;
-}
-p {
-  width: 2.415365rem /* 1855/768 */;
-  height: 0.126302rem /* 97/768 */;
-  line-height: 0.126302rem /* 97/768 */;
-  background-image:linear-gradient(to right, rgba(5, 135, 150, 0.7), rgba(5, 135, 150, 0));
-}
-span {
-  color: white;
-  font-size: 0.048177rem /* 37/768 */;
-  margin-left: 0.130208rem /* 100/768 */;
 }
 </style>

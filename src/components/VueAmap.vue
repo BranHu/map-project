@@ -537,6 +537,7 @@ const getDistrictBounds = (district) => {
 };
 
 const drawScatter = (type) => {
+  console.log(type)
   let dataSource = 'all'
   const pointLayer = new Loca.PointLayer({
     zIndex: 10,

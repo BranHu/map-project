@@ -1,9 +1,10 @@
 <script setup>
 import * as echarts from "echarts";
-import { onMounted } from "vue";
+import { onMounted, ref } from "vue";
 // defineProps({
 //   option: {},
 // });
+const detail = ref("6666666666");
 
 const barOption = {
   grid: {
@@ -375,7 +376,7 @@ onMounted(() => {
   <div
     class="wrapper animate__animated animate__fadeInDown animate__delay-0.6s"
   >
-    <p><span>产业技术分布</span></p>
+    <TitlePover :detail="detail" :left="false" />
     <div id="bar"></div>
     <div class="pie-chart">
       <div id="pie"></div>
@@ -403,20 +404,5 @@ onMounted(() => {
 #bar {
   width: 2.21875rem /* 1704/768 */;
   height: 1.041667rem /* 800/768 */;
-}
-p {
-  width: 2.21875rem /* 1704/768 */;
-  height: 0.126302rem /* 97/768 */;
-  line-height: 0.126302rem /* 97/768 */;
-  background-image: linear-gradient(
-    to right,
-    rgba(5, 135, 150, 0.7),
-    rgba(5, 135, 150, 0)
-  );
-}
-span {
-  color: white;
-  font-size: 0.048177rem /* 37/768 */;
-  margin-left: 0.130208rem /* 100/768 */;
 }
 </style>
